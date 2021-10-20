@@ -32,10 +32,6 @@ public class SettingsBoolItem: ObservableObject, SettingsValueItem {
         }
     }
     
-    public lazy var view: SettingsBoolCell = {
-        SettingsBoolCell(item: self)
-    }()
-    
     private var cancellables = Set<AnyCancellable>()
     
     public init(name: String, default value: Bool, description: String) {
@@ -64,10 +60,6 @@ public class SettingsInputItem: ObservableObject, SettingsValueItem {
             value.value
         }
     }
-    
-    public lazy var view: SettingsInputCell = {
-        SettingsInputCell(item: self)
-    }()
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -135,10 +127,6 @@ public class SettingsButtonItem: ObservableObject, SettingsItem {
     public let name: String
     public let buttonName: String
     public let completion = PassthroughSubject<Void, Never>()
-    
-    public lazy var view: SettingsButtonCell = {
-        SettingsButtonCell(item: self)
-    }()
     
     public init(name: String, buttonName: String) {
         self.name = name

@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct SettingsController: View {
+public struct SettingsController: View {
     
-    var items: [SettingsItem]
+    public var items: [SettingsItem]
     
-    var body: some View {
+    public var body: some View {
         VStack {
             ForEach(0..<items.count) {
                 let obj = items[$0]

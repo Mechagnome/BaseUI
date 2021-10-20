@@ -11,6 +11,10 @@ public struct SettingsController: View {
     
     public var items: [SettingsItem]
     
+    public init(items: [SettingsItem]) {
+        self.items = items
+    }
+    
     public var body: some View {
         VStack {
             ForEach(0..<items.count) {

@@ -133,3 +133,15 @@ public class SettingsButtonItem: ObservableObject, SettingsItem {
         self.buttonName = buttonName
     }
 }
+
+
+public class SettingsTextItem: ObservableObject, SettingsItem {
+    
+    public let name: String
+    public let description: String
+    
+    public init(name: String, description: String) {
+        self.name = name
+        self.description = description
+    }
+}

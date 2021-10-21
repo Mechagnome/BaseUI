@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-public struct SettingsPickCell: View {
+struct SettingsPickCell: View {
     
     @ObservedObject
     var item: SettingsPickItem
@@ -17,7 +17,7 @@ public struct SettingsPickCell: View {
         HStack {
             HStack {
                 Spacer()
-                Text(item.name + ":")
+                Text(item.name)
             }
             .frame(width: 150)
             Picker(selection: $item.rawIndex, label: Text("")) {

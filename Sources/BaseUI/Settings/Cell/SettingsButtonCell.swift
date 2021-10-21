@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-public struct SettingsButtonCell: View {
+struct SettingsButtonCell: View {
     
     @ObservedObject
     var item: SettingsButtonItem
@@ -16,7 +16,7 @@ public struct SettingsButtonCell: View {
         HStack {
             HStack {
                 Spacer()
-                Text(item.name + ":")
+                Text(item.name)
             }
             .frame(width: 150)
             Button(action: {

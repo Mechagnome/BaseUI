@@ -27,6 +27,8 @@ public struct SettingsController: View {
                     SettingsPickCell(item: item)
                 } else if let item = obj as? SettingsButtonItem {
                     SettingsButtonCell(item: item)
+                } else if let item = obj as? SettingsTextItem {
+                    SettingsTextCell(item: item)
                 } else {
                     Text("")
                 }
@@ -46,6 +48,7 @@ struct SettingsController_Previews: PreviewProvider {
         let item2 = SettingsInputItem(name: "输入框", default: "", placeholder: "请输入内容")
         let item3 = SettingsPickItem(name: "单选", default: SettingsPickCell_Previews.Animal.cat.name, options: SettingsPickCell_Previews.Animal.allCases.map(\.name))
         let item4 = SettingsButtonItem(name: "按钮", buttonName: "按钮文本")
-        return [item1, item2, item3, item4]
+        let item5 = SettingsTextItem(name: "Title", description: "Description")
+        return [item1, item2, item3, item4, item5]
     }
 }

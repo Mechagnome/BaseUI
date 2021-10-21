@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-public struct SettingsBoolCell: View {
+struct SettingsBoolCell: View {
     
     @ObservedObject
     var item: SettingsBoolItem
@@ -17,7 +17,7 @@ public struct SettingsBoolCell: View {
         HStack {
             HStack {
                 Spacer()
-                Text(item.name + ":")
+                Text(item.name)
             }
             .frame(width: 150)
             Toggle(isOn: $item.rawValue) {

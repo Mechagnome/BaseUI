@@ -8,7 +8,7 @@
 import SwiftUI
 import Combine
 
-public struct SettingsInputCell: View {
+struct SettingsInputCell: View {
     
     @ObservedObject
     var item: SettingsInputItem
@@ -17,7 +17,7 @@ public struct SettingsInputCell: View {
         HStack {
             HStack {
                 Spacer()
-                Text(item.name + ":")
+                Text(item.name)
             }
             .frame(width: 150)
             TextField(item.placeholder, text: $item.rawValue)
